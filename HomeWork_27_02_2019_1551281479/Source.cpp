@@ -10,17 +10,6 @@ using namespace std;
 HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
 
-//char wordAmount(char *search)
-//{
-//	int count = 0;
-//
-//	for (int i = 0; i < strlen(search); i++)
-//	{
-//		if (search[i] != '\0')
-//			count++;
-//	}
-//}
-
 char *my_strstr(char *s1, char *s2)
 {
 	char *p1 = s1;
@@ -89,13 +78,15 @@ void Task2()
 {
 	/* 2.	*Пользователь вводит строку, символ для поиска и символ для замены. 
 	Программа заменяет все вхождения символа поиска на символ замены. */
-
+	
+	SetConsoleTextAttribute(hConsole, 10);
+	cout << "\n--------------------------------------------------------------------------\n\nTask2\n\n";
+	SetConsoleTextAttribute(hConsole, 7);
 
 	char str[100];
 	char search;
 	char change;
 
-	
 
 	cout << endl << "Введите текст -> ";
 	cin.getline(str, 100, '.');	
@@ -116,15 +107,7 @@ void Task2()
 		cout << "Искомый символ не найден!" << endl;
 	else
 		cout << "Измененный текст:" << endl << str << endl;
-
-
-
-	SetConsoleTextAttribute(hConsole, 10);
-	cout << "\n--------------------------------------------------------------------------\n\nTask2\n\n";
-	SetConsoleTextAttribute(hConsole, 7);
-
-
-
+	
 }
 
 
